@@ -323,7 +323,7 @@ export default function Home() {
           </div>
 
           {/* About - Full Width Below */}
-          <div className={`mt-12 p-6 rounded-lg border ${darkMode ? 'border-white/10 bg-white/5' : 'border-black/10 bg-black/5'}`}>
+          <div className={`mt-13 p-6 rounded-lg border ${darkMode ? 'border-white/10 bg-white/5' : 'border-black/10 bg-black/5'}`}>
             <p className={`text-sm leading-relaxed ${darkMode ? 'text-white/70' : 'text-black/70'}`}>
               Hi <span className="inline-block animate-wave">👋</span> ,  I'm Rishad, MERN Stack Developer with a strong background in building scalable and high-performance web applications. My expertise spans both frontend and backend development, with hands-on experience in:
               <br /><br />
@@ -342,9 +342,8 @@ export default function Home() {
 
 
       {/* Skills Section */}
-      <section id="skills" className={`py-16 px-4 sm:px-6 border-t ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
+      <section id="skills" className={`py-16 mb-20 px-4 sm:px-6 ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-1xl font-bold mb-8">Technical Stack</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             <SkillCard title="Frontend" icon={<Code2 size={16} />} skills={skills.frontend} darkMode={darkMode} />
             <SkillCard title="Backend" icon={<Server size={16} />} skills={skills.backend} darkMode={darkMode} />
@@ -356,9 +355,9 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className={`py-16 px-4 sm:px-6 border-t ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
+      <section id="projects" className={`py-16 px-4 sm:px-6  ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-1xl font-bold mb-8">Projects</h2>
+          <h2 className="text-1xl font-bold">Projects</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} darkMode={darkMode} />
@@ -394,7 +393,7 @@ function ProjectCard({ project, darkMode }: any) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className={`group rounded-lg border transition-all ${
+    <div className={`group rounded-lg mt-17 mb-15 border transition-all ${
       darkMode ? 'border-white/10 hover:border-white/20 bg-white/5' : 'border-black/10 hover:border-black/20 bg-black/5'
     }`}>
       
@@ -471,8 +470,8 @@ function ProjectCard({ project, darkMode }: any) {
                     key={index} 
                     className={`text-xs px-2 py-1 rounded ${
                       darkMode 
-                        ? 'bg-blue-500/20 text-blue-300' 
-                        : 'bg-blue-500/20 text-blue-700'
+                        ? 'border-white/20 text-white/60' 
+                        : 'border-black/20 text-black/60'
                     }`}
                   >
                     {arch}
