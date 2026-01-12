@@ -357,7 +357,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="projects" className={`py-16 px-4 sm:px-6  ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-1xl font-bold">Projects</h2>
+          {/* <h2 className="text-1xl font-bold">Projects</h2> */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} darkMode={darkMode} />
