@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rishad",
-  description: "Rishad Karappa Portfolio",
+  title: "Rishad Karappa",
+  description: "Muhammed Rishad Karappa, Personal Portfolio",
 };
 
 export default function RootLayout({

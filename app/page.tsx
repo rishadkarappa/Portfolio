@@ -355,16 +355,15 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className={`py-16 px-4 sm:px-6  ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
+      {/* <section id="projects" className={`py-16 px-4 sm:px-6  ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
         <div className="max-w-5xl mx-auto">
-          {/* <h2 className="text-1xl font-bold">Projects</h2> */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} darkMode={darkMode} />
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );
@@ -389,171 +388,171 @@ function SkillCard({ title, icon, skills, darkMode }: any) {
   );
 }
 
-function ProjectCard({ project, darkMode }: any) {
-  const [isExpanded, setIsExpanded] = useState(false);
+// function ProjectCard({ project, darkMode }: any) {
+//   const [isExpanded, setIsExpanded] = useState(false);
 
-  return (
-    <div className={`group rounded-lg mt-17 mb-15 border transition-all ${
-      darkMode ? 'border-white/10 hover:border-white/20 bg-white/5' : 'border-black/10 hover:border-black/20 bg-black/5'
-    }`}>
+//   return (
+//     <div className={`group rounded-lg mt-17 mb-15 border transition-all ${
+//       darkMode ? 'border-white/10 hover:border-white/20 bg-white/5' : 'border-black/10 hover:border-black/20 bg-black/5'
+//     }`}>
       
-      {/* Header - Always Visible */}
-      <div className="p-5">
-        <div className="flex items-start justify-between gap-2">
-          <div className="flex-1">
-            <h3 className="text-base font-semibold mb-2">{project.title}</h3>
-            <p className={`text-xs leading-relaxed ${darkMode ? 'text-white/60' : 'text-black/60'}`}>
-              {project.description}
-            </p>
-          </div>
+//       {/* Header - Always Visible */}
+//       <div className="p-5">
+//         <div className="flex items-start justify-between gap-2">
+//           <div className="flex-1">
+//             <h3 className="text-base font-semibold mb-2">{project.title}</h3>
+//             <p className={`text-xs leading-relaxed ${darkMode ? 'text-white/60' : 'text-black/60'}`}>
+//               {project.description}
+//             </p>
+//           </div>
           
-          {/* Expand/Collapse Button */}
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className={`flex-shrink-0 p-2 rounded-full transition-all ${
-              darkMode 
-                ? 'hover:bg-white/10 text-white/70' 
-                : 'hover:bg-black/10 text-black/70'
-            }`}
-            aria-label={isExpanded ? "Collapse details" : "Expand details"}
-          >
-            <ArrowRight 
-              size={16} 
-              className={`transition-transform duration-300 ${
-                isExpanded ? 'rotate-90' : ''
-              }`}
-              style={{
-                transform: isExpanded ? 'rotate(0deg)' : 'rotate(0deg)'
-              }}
-            />
-          </button>
-        </div>
-      </div>
+//           {/* Expand/Collapse Button */}
+//           <button
+//             onClick={() => setIsExpanded(!isExpanded)}
+//             className={`flex-shrink-0 p-2 rounded-full transition-all ${
+//               darkMode 
+//                 ? 'hover:bg-white/10 text-white/70' 
+//                 : 'hover:bg-black/10 text-black/70'
+//             }`}
+//             aria-label={isExpanded ? "Collapse details" : "Expand details"}
+//           >
+//             <ArrowRight 
+//               size={16} 
+//               className={`transition-transform duration-300 ${
+//                 isExpanded ? 'rotate-90' : ''
+//               }`}
+//               style={{
+//                 transform: isExpanded ? 'rotate(0deg)' : 'rotate(0deg)'
+//               }}
+//             />
+//           </button>
+//         </div>
+//       </div>
 
-      {/* Expandable Content */}
-      <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className={`px-5 pb-5 border-t ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
+//       {/* Expandable Content */}
+//       <div 
+//         className={`overflow-hidden transition-all duration-300 ease-in-out ${
+//           isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
+//         }`}
+//       >
+//         <div className={`px-5 pb-5 border-t ${darkMode ? 'border-white/10' : 'border-black/10'}`}>
           
-          {/* Highlights */}
-          {project.highlights && (
-            <div className="mt-4">
-              <div className="flex flex-wrap gap-1.5">
-                {project.highlights.map((highlight: string, index: number) => (
-                  <span 
-                    key={index} 
-                    className={`text-xs px-2 py-0.5 rounded-md ${
-                      darkMode ? 'bg-white/10' : 'bg-black/10'
-                    }`}
-                  >
-                    {highlight}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
+//           {/* Highlights */}
+//           {project.highlights && (
+//             <div className="mt-4">
+//               <div className="flex flex-wrap gap-1.5">
+//                 {project.highlights.map((highlight: string, index: number) => (
+//                   <span 
+//                     key={index} 
+//                     className={`text-xs px-2 py-0.5 rounded-md ${
+//                       darkMode ? 'bg-white/10' : 'bg-black/10'
+//                     }`}
+//                   >
+//                     {highlight}
+//                   </span>
+//                 ))}
+//               </div>
+//             </div>
+//           )}
 
-          {/* Architecture */}
-          {project.architecture && (
-            <div className="mt-4">
-              <p className={`text-xs font-medium mb-2 ${
-                darkMode ? 'text-white/80' : 'text-black/80'
-              }`}>
-                Architecture:
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {project.architecture.map((arch: string, index: number) => (
-                  <span 
-                    key={index} 
-                    className={`text-xs px-2 py-1 rounded ${
-                      darkMode 
-                        ? 'border-white/20 text-white/60' 
-                        : 'border-black/20 text-black/60'
-                    }`}
-                  >
-                    {arch}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
+//           {/* Architecture */}
+//           {project.architecture && (
+//             <div className="mt-4">
+//               <p className={`text-xs font-medium mb-2 ${
+//                 darkMode ? 'text-white/80' : 'text-black/80'
+//               }`}>
+//                 Architecture:
+//               </p>
+//               <div className="flex flex-wrap gap-1.5">
+//                 {project.architecture.map((arch: string, index: number) => (
+//                   <span 
+//                     key={index} 
+//                     className={`text-xs px-2 py-1 rounded ${
+//                       darkMode 
+//                         ? 'border-white/20 text-white/60' 
+//                         : 'border-black/20 text-black/60'
+//                     }`}
+//                   >
+//                     {arch}
+//                   </span>
+//                 ))}
+//               </div>
+//             </div>
+//           )}
 
-          {/* Tech Stack */}
-          {project.tech && (
-            <div className="mt-4">
-              <p className={`text-xs font-medium mb-2 ${
-                darkMode ? 'text-white/80' : 'text-black/80'
-              }`}>
-                Tech Stack:
-              </p>
-              <div className="flex flex-wrap gap-1">
-                {project.tech.map((tech: string, index: number) => (
-                  <span 
-                    key={index} 
-                    className={`text-xs px-2 py-0.5 rounded border ${
-                      darkMode 
-                        ? 'border-white/20 text-white/60' 
-                        : 'border-black/20 text-black/60'
-                    }`}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
+//           {/* Tech Stack */}
+//           {project.tech && (
+//             <div className="mt-4">
+//               <p className={`text-xs font-medium mb-2 ${
+//                 darkMode ? 'text-white/80' : 'text-black/80'
+//               }`}>
+//                 Tech Stack:
+//               </p>
+//               <div className="flex flex-wrap gap-1">
+//                 {project.tech.map((tech: string, index: number) => (
+//                   <span 
+//                     key={index} 
+//                     className={`text-xs px-2 py-0.5 rounded border ${
+//                       darkMode 
+//                         ? 'border-white/20 text-white/60' 
+//                         : 'border-black/20 text-black/60'
+//                     }`}
+//                   >
+//                     {tech}
+//                   </span>
+//                 ))}
+//               </div>
+//             </div>
+//           )}
 
-          {/* Key Features */}
-          {project.keyFeatures && (
-            <div className="mt-4">
-              <p className={`text-xs font-medium mb-2 ${
-                darkMode ? 'text-white/80' : 'text-black/80'
-              }`}>
-                Key Features ({project.keyFeatures.length}):
-              </p>
-              <ul className={`text-xs space-y-1.5 ${
-                darkMode ? 'text-white/60' : 'text-black/60'
-              }`}>
-                {project.keyFeatures.map((feature: string, index: number) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <span className={`mt-1 ${darkMode ? 'text-white/40' : 'text-black/40'}`}>
-                      •
-                    </span>
-                    <span className="flex-1">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+//           {/* Key Features */}
+//           {project.keyFeatures && (
+//             <div className="mt-4">
+//               <p className={`text-xs font-medium mb-2 ${
+//                 darkMode ? 'text-white/80' : 'text-black/80'
+//               }`}>
+//                 Key Features ({project.keyFeatures.length}):
+//               </p>
+//               <ul className={`text-xs space-y-1.5 ${
+//                 darkMode ? 'text-white/60' : 'text-black/60'
+//               }`}>
+//                 {project.keyFeatures.map((feature: string, index: number) => (
+//                   <li key={index} className="flex items-start gap-2">
+//                     <span className={`mt-1 ${darkMode ? 'text-white/40' : 'text-black/40'}`}>
+//                       •
+//                     </span>
+//                     <span className="flex-1">{feature}</span>
+//                   </li>
+//                 ))}
+//               </ul>
+//             </div>
+//           )}
 
-          {/* GitHub Links */}
-          {project.github && (
-            <div className={`flex flex-wrap gap-2 mt-4 pt-4 border-t ${
-              darkMode ? 'border-white/10' : 'border-black/10'
-            }`}>
-              {project.github.map((repo: any, index: number) => (
-                <a
-                  key={index}
-                  href={repo.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full ${
-                    darkMode 
-                      ? 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white' 
-                      : 'bg-black/10 text-black/70 hover:bg-black/20 hover:text-black'
-                  } transition-all hover:scale-105`}
-                >
-                  <Github size={14} />
-                  {repo.label}
-                </a>
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
+//           {/* GitHub Links */}
+//           {project.github && (
+//             <div className={`flex flex-wrap gap-2 mt-4 pt-4 border-t ${
+//               darkMode ? 'border-white/10' : 'border-black/10'
+//             }`}>
+//               {project.github.map((repo: any, index: number) => (
+//                 <a
+//                   key={index}
+//                   href={repo.url}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className={`inline-flex items-center gap-1.5 text-xs px-3 py-1.5 rounded-full ${
+//                     darkMode 
+//                       ? 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white' 
+//                       : 'bg-black/10 text-black/70 hover:bg-black/20 hover:text-black'
+//                   } transition-all hover:scale-105`}
+//                 >
+//                   <Github size={14} />
+//                   {repo.label}
+//                 </a>
+//               ))}
+//             </div>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
