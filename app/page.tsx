@@ -50,11 +50,11 @@ export default function Home() {
   };
 
   const handleGitHub = () => {
-    window.open('https://github.com/rishadsinu', '_blank');
+    window.open('https://github.com/rishadkarappa', '_blank');
   };
 
   const handleX = () => {
-    window.open('https://x.com/rishaddl', '_blank');
+    window.open('https://x.com/rishadkarappa', '_blank');
   };
 
   const skills = {
