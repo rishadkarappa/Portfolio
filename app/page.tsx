@@ -59,11 +59,11 @@ export default function Home() {
 
   const skills = {
     frontend: ['React.js', 'TypeScript'],
-    backend: ['Node.js', 'Express.js', 'Microservices Architecture'],
+    backend: ['Microservices Architecture', 'Node.js', 'Express.js'],
     messaging: ['RabbitMQ', 'gRPC', 'REST APIs'],
     database: ['MongoDB', 'PostgreSQL'],
-    devops: ['AWS', 'Docker', 'Kubernetes'],
-    architecture: ['Clean Architecture', 'Repository Pattern', 'MVC']
+    devops: ['AWS', 'CI/CD Pipeline' ,'Docker', 'Kubernetes'],
+    architecture: ['Clean Architecture', 'MVC']
   };
 
 
@@ -330,9 +330,9 @@ export default function Home() {
               Frontend: React.js, TypeScript<br />
               Backend: Node.js, Express.js, Microservices architecture<br />
               Messaging & Communication: RabbitMQ, gRPC, REST<br />
-              Architecture: Clean Architecture, Repository Pattern, MVC<br />
+              Architecture: Clean Architecture, MVC<br />
               Databases: MongoDB, PostgreSQL<br />
-              DevOps & Cloud: AWS, Docker, Kubernetes<br />
+              DevOps & Cloud: AWS, Docker, Kubernetes, CI/CD Pipeline<br />
               <br />
               I focus on writing efficient, clean, and maintainable code while designing applications that are optimized for performance and scalability. I thrive in collaborative environments, enjoy solving problems, and am always eager to build.
             </p>
