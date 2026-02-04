@@ -328,7 +328,7 @@ export default function Home() {
               Hi <span className="inline-block animate-wave">👋</span> ,  I'm Rishad, MERN Stack Developer with a strong background in building scalable and high-performance web applications. My expertise spans both frontend and backend development, with hands-on experience in:
               <br /><br />
               Frontend: React.js, TypeScript<br />
-              Backend: Node.js, , Microservices architecture, Express.js<br />
+              Backend:  Microservices architecture, Node.js, Express.js<br />
               Messaging & Communication: RabbitMQ, gRPC, REST<br />
               Architecture: Clean Architecture, MVC<br />
               Databases: MongoDB, PostgreSQL<br />
