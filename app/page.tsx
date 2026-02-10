@@ -13,6 +13,13 @@ const XIcon = () => (
   </svg>
 );
 
+// Medium Icon
+const MediumIcon = () => (
+  <svg viewBox="0 0 1043.63 592.71" width="18" height="18" fill="currentColor">
+    <path d="M588.67 296.35c0 163.9-131.56 296.35-293.83 296.35S0 460.25 0 296.35 131.56 0 294.84 0s293.83 132.45 293.83 296.35zm323.15 0c0 154.78-65.78 280.35-146.91 280.35S618 451.13 618 296.35 683.78 16 764.91 16s146.91 125.57 146.91 280.35zm131.81 0c0 139.05-23.51 251.86-52.47 251.86s-52.49-112.81-52.49-251.86 23.51-251.86 52.49-251.86 52.47 112.81 52.47 251.86z"/>
+  </svg>
+);
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -56,6 +63,10 @@ export default function Home() {
   const handleX = () => {
     window.open('https://x.com/rishadkarappa', '_blank');
   };
+
+  const handleMedium = () => {
+  window.open('https://medium.com/@rishadkarappa', '_blank');
+};
 
   const skills = {
     frontend: ['React.js', 'TypeScript'],
@@ -199,6 +210,23 @@ export default function Home() {
             >
               <XIcon />
             </button>
+
+            <button
+               onClick={handleMedium}
+                className={`p-2 rounded-full transition-all duration-200 ${
+                 darkMode
+                ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
+                : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
+               }`}
+              style={{
+                 backdropFilter: 'blur(4px)',
+                 WebkitBackdropFilter: 'blur(4px)',
+               }}
+               aria-label="Medium"
+              >
+            <MediumIcon />
+          </button>
+
 
             <button
               onClick={handleEmail}
