@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Github, Linkedin, Mail, Code2, Database, Server, Container, ArrowRight, X, AlertCircle, Download, Calendar } from 'lucide-react';
+import { Moon, Sun, Github, Linkedin, Mail, Code2, Database, Server, Container, ArrowRight, X, AlertCircle, Download, Calendar, MoonIcon } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -17,6 +17,13 @@ const XIcon = () => (
 const MediumIcon = () => (
   <svg viewBox="0 0 1043.63 592.71" width="18" height="18" fill="currentColor">
     <path d="M588.67 296.35c0 163.9-131.56 296.35-293.83 296.35S0 460.25 0 296.35 131.56 0 294.84 0s293.83 132.45 293.83 296.35zm323.15 0c0 154.78-65.78 280.35-146.91 280.35S618 451.13 618 296.35 683.78 16 764.91 16s146.91 125.57 146.91 280.35zm131.81 0c0 139.05-23.51 251.86-52.47 251.86s-52.49-112.81-52.49-251.86 23.51-251.86 52.49-251.86 52.47 112.81 52.47 251.86z"/>
+  </svg>
+);
+
+// Add Dev.to icon after MediumIcon component
+const DevToIcon = () => (
+  <svg viewBox="0 0 448 512" width="18" height="18" fill="currentColor">
+    <path d="M120.12 208.29c-3.88-2.9-7.77-4.35-11.65-4.35H91.03v104.47h17.45c3.88 0 7.77-1.45 11.65-4.35 3.88-2.9 5.82-7.25 5.82-13.06v-69.65c-.01-5.8-1.96-10.16-5.83-13.06zM404.1 32H43.9C19.7 32 .06 51.59 0 75.8v360.4C.06 460.41 19.7 480 43.9 480h360.2c24.21 0 43.84-19.59 43.9-43.8V75.8c-.06-24.21-19.7-43.8-43.9-43.8zM154.2 291.19c0 18.81-11.61 47.31-48.36 47.25h-46.4V172.98h47.38c35.44 0 47.36 28.46 47.37 47.28l.01 70.93zm100.68-88.66H201.6v38.42h32.57v29.57H201.6v38.41h53.29v29.57h-62.18c-11.16.29-20.44-8.53-20.72-19.69V193.7c-.27-11.15 8.56-20.41 19.71-20.69h63.19l-.01 29.52zm103.64 115.29c-13.2 30.75-36.85 24.63-47.44 0l-38.53-144.8h32.57l29.71 113.72 29.57-113.72h32.58l-38.46 144.8z"/>
   </svg>
 );
 
@@ -66,6 +73,10 @@ export default function Home() {
 
   const handleMedium = () => {
   window.open('https://medium.com/@rishadkarappa', '_blank');
+};
+
+const handleDevTo = () => {
+  window.open('https://dev.to/rishadkarappa', '_blank');
 };
 
   const skills = {
@@ -148,7 +159,7 @@ export default function Home() {
       ${darkMode
               ? 'bg-white/2'
               : 'bg-black/2'
-            }
+             }
     `}
           style={{
             backdropFilter: 'blur(5px)',
@@ -166,82 +177,66 @@ export default function Home() {
           <div className="flex items-center gap-1">
             
 
-            <button
-              onClick={handleGitHub}
-              className={`p-2 rounded-full transition-all duration-200 ${darkMode
-                ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
-                : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
-                }`}
-              style={{
-                backdropFilter: 'blur(4px)',
-                WebkitBackdropFilter: 'blur(4px)',
-              }}
-              aria-label="GitHub"
-            >
-              <Github size={18} />
-            </button>
+            {/* Reusable wrapper — wrap each button like this */}
+<div className="relative group">
+  <button
+    onClick={handleGitHub}
+    className={`p-2 rounded-full transition-all duration-200 ${darkMode
+      ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
+      : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
+    }`}
+    style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}
+    aria-label="GitHub"
+  >
+    <Github size={18} />
+  </button>
+  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap
+    pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100
+    ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>
+    GitHub
+  </span>
+</div>
 
-            <button
-              onClick={handleLinkedIn}
-              className={`p-2 rounded-full transition-all duration-200 ${darkMode
-                ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
-                : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
-                }`}
-              style={{
-                backdropFilter: 'blur(4px)',
-                WebkitBackdropFilter: 'blur(4px)',
-              }}
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={18} />
-            </button>
+{/* LinkedIn */}
+<div className="relative group">
+  <button onClick={handleLinkedIn} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="LinkedIn">
+    <Linkedin size={18} />
+  </button>
+  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>LinkedIn</span>
+</div>
 
-            <button
-              onClick={handleX}
-              className={`p-2 rounded-full transition-all duration-200 ${darkMode
-                ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
-                : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
-                }`}
-              style={{
-                backdropFilter: 'blur(4px)',
-                WebkitBackdropFilter: 'blur(4px)',
-              }}
-              aria-label="X (Twitter)"
-            >
-              <XIcon />
-            </button>
+{/* X / Twitter */}
+<div className="relative group">
+  <button onClick={handleX} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="X (Twitter)">
+    <XIcon />
+  </button>
+  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>Twitter</span>
+</div>
 
-            <button
-               onClick={handleMedium}
-                className={`p-2 rounded-full transition-all duration-200 ${
-                 darkMode
-                ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
-                : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
-               }`}
-              style={{
-                 backdropFilter: 'blur(4px)',
-                 WebkitBackdropFilter: 'blur(4px)',
-               }}
-               aria-label="Medium"
-              >
-            <MediumIcon />
-          </button>
+{/* Medium */}
+<div className="relative group">
+  <button onClick={handleMedium} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="Medium">
+    <MediumIcon />
+  </button>
+  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>Medium</span>
+</div>
 
+{/* Dev.to */}
+<div className="relative group">
+  <button onClick={handleDevTo} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="Dev.to">
+    <DevToIcon />
+  </button>
+  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>Dev.to</span>
+</div>
 
-            <button
-              onClick={handleEmail}
-              className={`p-2 rounded-full transition-all duration-200 ${darkMode
-                ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95'
-                : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'
-                }`}
-              style={{
-                backdropFilter: 'blur(4px)',
-                WebkitBackdropFilter: 'blur(4px)',
-              }}
-              aria-label="Email"
-            >
-              <Mail size={18} />
-            </button>
+{/* Email */}
+<div className="relative group">
+  <button onClick={handleEmail} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="Email">
+    <Mail size={18} />
+  </button>
+  <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>Email</span>
+</div>
+
           </div>
 
           {/* Divider */}
@@ -278,7 +273,7 @@ export default function Home() {
                   : 'opacity-100 rotate-0 scale-100'
                   }`}
               />
-              <Moon
+              <MoonIcon
                 size={20}
                 className={`absolute inset-0 transition-all duration-300 ${darkMode
                   ? 'opacity-100 rotate-0 scale-100'
