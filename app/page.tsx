@@ -222,12 +222,13 @@ const handleDevTo = () => {
 </div>
 
 {/* Dev.to */}
-<div className="relative group">
+{/* <div className="relative group">
   <button onClick={handleDevTo} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="Dev.to">
     <DevToIcon />
   </button>
   <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>Dev.to</span>
-</div>
+</div> */}
+
 
 {/* Email */}
 <div className="relative group">
