@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   const handleGitHub = () => {
-    window.open('https://github.com/rishadkarappa', '_blank');
+    window.open('https://github.com/rishadsinu', '_blank');
   };
 
   const handleX = () => {
@@ -320,7 +320,7 @@ const handleDevTo = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+              {/* <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <button
                   className={`group flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-medium border transition-all ${darkMode
                     ? 'border-white/20 hover:bg-white/5'
@@ -342,7 +342,7 @@ const handleDevTo = () => {
                 </button>
 
 
-              </div>
+              </div> */}
             </div>
           </div>
 
