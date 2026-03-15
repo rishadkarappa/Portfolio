@@ -85,7 +85,7 @@ const handleDevTo = () => {
     messaging: ['RabbitMQ', 'gRPC', 'REST APIs'],
     database: ['MongoDB', 'PostgreSQL'],
     devops: ['AWS', 'CI/CD Pipeline' ,'Docker', 'Kubernetes'],
-    architecture: ['Clean Architecture', 'MVC']
+    architecture: ['Clean Architecture','Repository Pattern', 'MVC']
   };
 
 
@@ -94,7 +94,7 @@ const handleDevTo = () => {
     title: 'WorkBee – Unskilled Labour Platform',
     description: 'A location-based marketplace connecting clients with unskilled workers (students, helpers) for tasks like flat moving, cleaning, catering, mounting, purchasing assistance, and other local services. Empowers students and unskilled workers to earn money through flexible work opportunities.',
     tech: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'WebSocket', 'WebRTC', 'RabbitMQ', 'Docker', 'Kubernetes'],
-    architecture: ['Microservices Backend', 'Clean Architecture', 'SOLID Principles'],
+    architecture: ['Microservices Backend', 'Clean Architecture','SOLID Principles'],
     keyFeatures: [
       'Post and browse local unskilled work opportunities',
       'Real-time bidding and chat system via WebSocket',
@@ -354,7 +354,8 @@ const handleDevTo = () => {
               Frontend: React.js, TypeScript<br />
               Backend:  Microservices architecture, Node.js, Express.js<br />
               Messaging & Communication: RabbitMQ, gRPC, REST<br />
-              Architecture: Clean Architecture, MVC<br />
+              Architecture: Microservices, Clean Architecture<br />
+              Design Patterns: Repository Pattern, MVC<br />
               Databases: MongoDB, PostgreSQL<br />
               DevOps & Cloud: AWS, Docker, Kubernetes, CI/CD Pipeline<br />
               <br />
