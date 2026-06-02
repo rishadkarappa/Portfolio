@@ -56,7 +56,7 @@ export default function Home() {
   }, []);
 
   const handleEmail = () => {
-    window.location.href = 'mailto:rishadkarappa@gmail.com';
+    window.location.href = 'mailto:rishad.swe@gmail.com';
   };
 
   const handleLinkedIn = () => {
