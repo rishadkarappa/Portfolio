@@ -7,11 +7,11 @@ import Image from 'next/image';
 
 
 // Add X (Twitter) icon
-const XIcon = () => (
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-  </svg>
-);
+// const XIcon = () => (
+//   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+//     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+//   </svg>
+// );
 
 // Medium Icon
 const MediumIcon = () => (
@@ -206,12 +206,12 @@ const handleDevTo = () => {
 </div>
 
 {/* X / Twitter */}
-<div className="relative group">
+{/* <div className="relative group">
   <button onClick={handleX} className={`p-2 rounded-full transition-all duration-200 ${darkMode ? 'hover:bg-white/10 text-white/70 hover:text-white active:scale-95' : 'hover:bg-black/10 text-black/70 hover:text-black active:scale-95'}`} style={{ backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }} aria-label="X (Twitter)">
     <XIcon />
   </button>
   <span className={`absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded text-[10px] font-medium whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${darkMode ? 'bg-white text-black' : 'bg-black text-white'}`}>Twitter</span>
-</div>
+</div> */}
 
 {/* Medium */}
 <div className="relative group">
