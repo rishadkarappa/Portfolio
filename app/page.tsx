@@ -67,9 +67,9 @@ export default function Home() {
     window.open('https://github.com/rishadsinu', '_blank');
   };
 
-  const handleX = () => {
-    window.open('https://x.com/rishadkarappa', '_blank');
-  };
+  // const handleX = () => {
+  //   window.open('https://x.com', '_blank');
+  // };
 
   const handleMedium = () => {
   window.open('https://medium.com/@rishadkarappa', '_blank');
