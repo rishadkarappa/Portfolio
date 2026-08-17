@@ -83,7 +83,7 @@ const handleDevTo = () => {
     frontend: ['React.js', 'TypeScript'],
     backend: ['Microservices Architecture', 'Node.js', 'Express.js'],
     messaging: ['RabbitMQ', 'gRPC', 'REST APIs'],
-    database: ['MongoDB', 'PostgreSQL'],
+    database: ['MongoDB', 'PostgreSQL', 'Redis'],
     devops: ['AWS', 'CI/CD Pipeline' ,'Docker', 'Kubernetes'],
     architecture: ['Clean Architecture','Repository Pattern', 'MVC']
   };
@@ -290,61 +290,7 @@ const handleDevTo = () => {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 sm:pt-0">
         <div className="max-w-4xl w-full">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
-            {/* Profile Image - Left Side */}
-            <div className="flex-shrink-0">
-              <div className="relative">
-                <div className={`absolute inset-0 rounded-full blur-2xl opacity-10 ${darkMode ? 'bg-white' : 'bg-black'}`}></div>
-                <div className={`relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 ${darkMode ? 'border-white/10' : 'border-black/10'
-                  }`}>
-                  <Image
-                    src="/portfolio.png"
-                    alt="Rishad Karappa"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Content - Right Side */}
-            <div className="flex-1 space-y-4 text-center md:text-left">
-              <div className="space-y-2">
-                <h1 className="text-1xl sm:text-1xl font-bold tracking-tight">
-                  Muhammed Rishad Karappa
-                </h1>
-                <p className={`text-base sm:text ${darkMode ? 'text-white/60' : 'text-black/60'}`}>
-                  MERN Stack Developer<br />
-                </p>
-              </div>
-
-              {/* CTA Buttons */}
-              {/* <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                <button
-                  className={`group flex items-center gap-1.5 px-3 py-1 rounded-full text-[12px] font-medium border transition-all ${darkMode
-                    ? 'border-white/20 hover:bg-white/5'
-                    : 'border-black/20 hover:bg-black/5'
-                    }`}
-                >
-                  Schedule Meeting
-                  <Calendar size={12} className="group-hover:translate-x-0.5 transition-transform" />
-                </button>
-
-                <button
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[12px] font-medium border transition-colors ${darkMode
-                    ? 'border-white/20 hover:bg-white/5'
-                    : 'border-black/20 hover:bg-black/5'
-                    }`}
-                >
-                  Resume
-                  <Download size={12} />
-                </button>
-
-
-              </div> */}
-            </div>
-          </div>
+          
 
           {/* About - Full Width Below */}
           <div className={`mt-13 p-6 rounded-lg border ${darkMode ? 'border-white/10 bg-white/5' : 'border-black/10 bg-black/5'}`}>
@@ -356,7 +302,7 @@ const handleDevTo = () => {
               Messaging & Communication: RabbitMQ, gRPC, REST<br />
               Architecture: Microservices, Clean Architecture<br />
               Design Patterns: Repository Pattern, MVC<br />
-              Databases: MongoDB, PostgreSQL<br />
+              Databases: MongoDB, PostgreSQL, Redis<br />
               DevOps & Cloud: AWS, Docker, Kubernetes, CI/CD Pipeline<br />
               <br />
               I focus on writing efficient, clean, and maintainable code while designing applications that are optimized for performance and scalability. I thrive in collaborative environments, enjoy solving problems, and am always eager to build.
